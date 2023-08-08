@@ -23,7 +23,7 @@ const TodoList = () => {
                 <i className={'fas  fa-user'} />
             </CategoryIcon>
             <Title>Personal</Title>
-            <TodoInput value={todo} onChange={e => e.target.value}/>
+            <TodoInput value={todo} onChange={e => setTodo(e.target.value)}/>
             <AddTodo className='fas fa-plus'onClick={addButtonHandler}/>
         </TodoCategoryHeader>
         {todos.map((todo, index) => (
