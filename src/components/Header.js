@@ -23,7 +23,7 @@ const Header = () => {
         <HeaderItem>
             
             <Profile>
-                <img src="https://jasonholm.pythonanywhere.com/static/portfolio/profile.jpg" alt="profile" />
+                <img src="https://lh3.googleusercontent.com/a/AAcHTtetWKzzVoOwS9xl7LMysGc2U_gBNk-sG7vqXausdPNE2G7_=s96-c-rg-br100" alt="profile" />
             </Profile>
         </HeaderItem>
     </Wrapper>
