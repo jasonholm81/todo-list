@@ -11,9 +11,17 @@ const TodoList = () => {
     const addButtonHandler = () => {
         console.log('addButtonHandler')
         console.log(todo)
-        setTodos([todo, ...todos])
+        if (todo.length > 0) {
+        setTodos([{
+            id: todos.length,
+            title: todo,
+            completed: false,
+        },
+        ...todos,
+    ])
         console.log(todos)
         setTodo('')
+        }
     }
 
   return (
@@ -27,7 +35,7 @@ const TodoList = () => {
             <AddTodo className='fas fa-plus'onClick={addButtonHandler}/>
         </TodoCategoryHeader>
         {todos.map((todo, index) => (
-            <TodoItem key={index} todo={todo}/>
+            <TodoItem key={index} todo={todo} todos={todos} setTodos={setTodos}/>
         ))}
     </Wrapper>
     )
