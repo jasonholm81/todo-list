@@ -26,18 +26,19 @@ const TodoList = () => {
 
   return (
     <Wrapper>
-        <TodoCategoryHeader>
-            <CategoryIcon style={{ color: '#FD76A1' }}>
-                <i className={'fas  fa-user'} />
-            </CategoryIcon>
-            <Title>Personal</Title>
-            <TodoInput value={todo} onChange={e => setTodo(e.target.value)}/>
-            <AddTodo className='fas fa-plus'onClick={addButtonHandler}/>
-        </TodoCategoryHeader>
-        {todos.map((todo, index) => (
-            <TodoItem key={index} todo={todo} todos={todos} setTodos={setTodos}/>
-        ))}
+          <TodoCategoryHeader>
+              <CategoryIcon style={{ color: '#008494' }}>
+                  <i className={'fas  fa-clipboard'} />
+              </CategoryIcon>
+              <Title>Tasks</Title>
+              <TodoInput value={todo} onChange={e => setTodo(e.target.value)} />
+              <AddTodo className='fas fa-plus' onClick={addButtonHandler} />
+          </TodoCategoryHeader>
+          {todos.map((todo, index) => (
+              <TodoItem key={index} todo={todo} todos={todos} setTodos={setTodos} />
+          ))}
     </Wrapper>
+    
     )
 }
 
